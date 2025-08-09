@@ -20,6 +20,12 @@ on:
         default: 'false'
         required: false
         type: boolean
+      
+      SSH:
+        description: 'SSH连接'
+        default: 'false'
+        required: false
+        type: boolean
 
 #CI权限
 permissions: write-all
@@ -63,3 +69,5 @@ jobs:
       WRT_PACKAGE: ${{inputs.PACKAGE}}
       #仅输出配置文件
       WRT_TEST: ${{inputs.TEST}}
+      #仅输出配置文件
+      WRT_SSH: ${{inputs.SSH}}
