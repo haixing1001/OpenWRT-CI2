@@ -172,11 +172,15 @@ jobs:
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
+      - name: SSH connection to Actions
+        uses: P3TERX/ssh2actions@main
+        #if: env.WRT_SSH != 'true'
+
       - name: Download Packages
         if: env.WRT_TEST != 'true'
         run: |
           cd ./wrt/
-
+          make defconfig -j$(nproc) && make clean -j$(nproc)
           make download -j$(nproc)
 
       - name: Compile Firmware
