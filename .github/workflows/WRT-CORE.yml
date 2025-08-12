@@ -178,7 +178,7 @@ jobs:
 
       - name: SSH connection to Actions
         uses: P3TERX/ssh2actions@main
-        if: env.WRT_SSH != 'true'
+        if: env.WRT_SSH == 'true'
 
       - name: Download Packages
         if: env.WRT_TEST != 'true'
