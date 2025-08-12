@@ -20,7 +20,6 @@ on:
         default: 'false'
         required: false
         type: boolean
-      
       SSH:
         description: 'SSH连接'
         default: 'false'
