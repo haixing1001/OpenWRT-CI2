@@ -40,6 +40,9 @@ on:
       WRT_TEST:
         required: false
         type: string
+      WRT_SSH:
+        required: false
+        type: string
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -55,6 +58,7 @@ env:
   WRT_SOURCE: ${{inputs.WRT_SOURCE}}
   WRT_PACKAGE: ${{inputs.WRT_PACKAGE}}
   WRT_TEST: ${{inputs.WRT_TEST}}
+  WRT_SSH: ${{inputs.WRT_SSH}}
 
 jobs:
   core:
@@ -174,7 +178,7 @@ jobs:
 
       - name: SSH connection to Actions
         uses: P3TERX/ssh2actions@main
-        #if: env.WRT_SSH != 'true'
+        if: env.WRT_SSH != 'true'
 
       - name: Download Packages
         if: env.WRT_TEST != 'true'
