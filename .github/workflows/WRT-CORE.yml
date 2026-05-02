@@ -177,7 +177,7 @@ jobs:
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
       - name: SSH connection to Actions
-        uses: P3TERX/ssh2actions@main
+        uses: Warpbuilds/action-debugger@v1.3
         if: env.WRT_SSH == 'true'
 
       - name: Download Packages
