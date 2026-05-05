@@ -21,6 +21,7 @@ CONFIG_PACKAGE_luci-app-tailscale=n
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-wolplus=n
 CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-uhttp=y
 
 
 #删除插件
