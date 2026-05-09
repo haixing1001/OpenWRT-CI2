@@ -1,5 +1,5 @@
 #CI项目
-name: X86
+name: X86-64
 
 #CI计划
 on:
