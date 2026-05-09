@@ -1,5 +1,5 @@
 #CI项目
-name: OWRT-ALL
+name: QCA-ALL
 
 #CI计划
 on:
@@ -20,6 +20,11 @@ on:
         default: 'false'
         required: false
         type: boolean
+      SSH:
+        description: 'SSH连接'
+        default: 'false'
+        required: false
+        type: boolean
 
 #CI权限
 permissions: write-all
@@ -32,7 +37,7 @@ jobs:
       fail-fast: false
       #max-parallel: 3
       matrix:
-        CONFIG: [MEDIATEK, ROCKCHIP, X86]
+        CONFIG: [X86]
         SOURCE: [VIKINGYFY/immortalwrt]
         BRANCH: [owrt]
 
@@ -42,7 +47,7 @@ jobs:
       #编译配置
       WRT_CONFIG: ${{matrix.CONFIG}}
       #默认主题
-      WRT_THEME: argon
+      WRT_THEME: bootstrap
       #默认主机名
       WRT_NAME: OWRT
       #默认WIFI名称
@@ -50,7 +55,7 @@ jobs:
       #默认WIFI密码
       WRT_WORD: 12345678
       #默认地址
-      WRT_IP: 192.168.10.1
+      WRT_IP: 192.168.1.153
       #默认密码，仅作提示，修改无用
       WRT_PW: 无
       #源码链接
@@ -63,3 +68,5 @@ jobs:
       WRT_PACKAGE: ${{inputs.PACKAGE}}
       #仅输出配置文件
       WRT_TEST: ${{inputs.TEST}}
+      #仅输出配置文件
+      WRT_SSH: ${{inputs.SSH}}
