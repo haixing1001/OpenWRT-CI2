@@ -115,7 +115,7 @@ CONFIG_DEFAULT_nftables=y
 CONFIG_PACKAGE_kmod-nfnetlink-queue=y
 CONFIG_PACKAGE_kmod-nft-queue=y
 CONFIG_PACKAGE_nftables-json=y
-CONFIG_PACKAGE_kmod-tcp-bbr=y
+
 
 #USB驱动
 CONFIG_USB=n
