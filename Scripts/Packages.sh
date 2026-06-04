@@ -53,8 +53,8 @@ UPDATE_PACKAGE() {
 
 UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
-UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
-UPDATE_PACKAGE "cdnspeedtest" "haixing1001/my-packages" "main" "" "luci-app-cloudflarespeedtest luci-app-frpc frp"
+#UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
+UPDATE_PACKAGE "cdnspeedtest" "haixing1001/my-packages" "main" "" "luci-app-cloudflarespeedtest luci-app-frpc frp luci-app-singbox-server"
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
 #UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
