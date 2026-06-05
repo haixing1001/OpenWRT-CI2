@@ -176,7 +176,7 @@ jobs:
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
-      - name: SSH connection to Actions
+      - name: SSH connection to Actions(sudo touch /continue)
         uses: Warpbuilds/action-debugger@v1.3
         if: env.WRT_SSH == 'true'
 
